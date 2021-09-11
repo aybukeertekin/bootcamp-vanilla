@@ -1,8 +1,8 @@
 const NoteList = ({notes, onClick}) => {
     return(
-        <div>
+        <div className="grid-container">
             {notes.map(note =>
-                <div>
+                    <div className="grid-item">
                     <text>
                         Name:{"\n"}
                         {note.name}{"\n"}
