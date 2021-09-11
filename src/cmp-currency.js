@@ -1,4 +1,5 @@
-let currency = ({exchangeType, exchangeFrom, exchangeTo, buy, sell, diff}) => {
+let Currency = (props) => {
+    const {exchangeType, exchangeFrom, exchangeTo, buy, sell, diff} = props;
     return(
         <tr>
             <th>{exchangeType}</th>
@@ -10,4 +11,4 @@ let currency = ({exchangeType, exchangeFrom, exchangeTo, buy, sell, diff}) => {
         </tr>
     );
 }
-export default currency;
+export default Currency;

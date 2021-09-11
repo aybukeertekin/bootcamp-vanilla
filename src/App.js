@@ -1,10 +1,8 @@
-import Currency from "./cmp-table";
+import Currencies from "./cmp-table";
 
 const App = () => {
   return (
-    <div className="App">
-        <Currency/>
-    </div>
+      <Currencies/>
   );
 }
 
