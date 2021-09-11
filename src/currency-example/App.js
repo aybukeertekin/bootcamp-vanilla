@@ -5,5 +5,4 @@ const App = () => {
       <Currencies/>
   );
 }
-
 export default App;
