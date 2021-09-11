@@ -34,8 +34,6 @@ export default class Currencies extends React.Component {
         const result = this.data.currencies.map( temp =>
             <Currency
                 exchangeType={temp.exchangeType}
-                exchangeFrom={temp.exchangeFrom}
-                exchangeTo={temp.exchangeTo}
                 buy={temp.buy}
                 sell={temp.sell}
                 diff={temp.diff}
