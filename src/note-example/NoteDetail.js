@@ -1,7 +1,10 @@
 import {Link, useParams} from "react-router-dom";
+import {useContext} from "react";
+import {NotesContext} from "./App";
 
-const NoteDetail = ({notes}) => {
+const NoteDetail = () => {
     const {id} = useParams();
+    const {notes} = useContext(NotesContext)
     const note = notes.find(note => note.name === id);
     if(!note) return <div>Note cannot be found!</div>
     return(

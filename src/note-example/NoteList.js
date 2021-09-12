@@ -1,4 +1,9 @@
-const NoteList = ({notes, onClick}) => {
+import {Link} from "react-router-dom";
+import {useContext} from "react";
+import {NotesContext} from "./App";
+
+const NoteList = ({onClick}) => {
+    const {notes} = useContext(NotesContext);
     return(
         <div className="grid-container">
             {notes.map(note =>
@@ -10,6 +15,7 @@ const NoteList = ({notes, onClick}) => {
                         {note.contents}{"\n"}
                     </text>
                     <button name={note.name} onClick={onClick}>Delete</button>
+                    <Link to={"/notes/" + note.name}>Details</Link>
                 </div>
                 )
             }

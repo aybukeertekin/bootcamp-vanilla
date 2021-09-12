@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './note-example-router/App';
+import App from './note-example/App';
 
 ReactDOM.render(
     <App/>,
