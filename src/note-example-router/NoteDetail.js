@@ -9,10 +9,8 @@ const NoteDetail = ({notes}) => {
             <Link to={"/"}>Home</Link>
                 <div className="grid-item">
                     <text>
-                Name:{"\n"}
-            {note.name}{"\n"}
-                Contents:{"\n"}
-            {note.contents}{"\n"}
+                Name:{"\n"} {note.name}{"\n"}
+                Contents:{"\n"} {note.contents}{"\n"}
                 </text>
                 </div>
         </div>
