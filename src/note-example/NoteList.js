@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import {useContext} from "react";
-import {NotesContext} from "./App";
+import {NotesContext} from "./NotesContextProvider";
 
 const NoteList = ({onClick}) => {
     const {notes} = useContext(NotesContext);

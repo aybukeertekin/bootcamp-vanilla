@@ -1,6 +1,6 @@
 import {Link, useParams} from "react-router-dom";
 import {useContext} from "react";
-import {NotesContext} from "./App";
+import {NotesContext} from "./NotesContextProvider";
 
 const NoteDetail = () => {
     const {id} = useParams();

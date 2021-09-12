@@ -2,10 +2,10 @@ import Form from "./Form";
 import NoteList from "./NoteList";
 import {Link} from "react-router-dom";
 import {useContext} from "react";
-import {NotesContext} from "./App";
+import {NotesContext} from "./NotesContextProvider";
 
-const Notepad = ({isNote, setNotes}) => {
-    const {notes} = useContext(NotesContext);
+const Notepad = ({isNote}) => {
+    const {notes, setNotes} = useContext(NotesContext);
     return(
         <div>
             {isNote ? <Link to="/notes">Notes</Link> : <Link to="/">Home</Link>}
@@ -17,7 +17,7 @@ const Notepad = ({isNote, setNotes}) => {
                 }
                 setNotes(
                     notes.concat([{name: event.target[0].value, contents: event.target[1].value}]));}}/>}
-            <NoteList notes={notes} onClick={(event) => {
+            <NoteList onClick={(event) => {
     event.preventDefault();
     setNotes(notes.filter(note => {
         return note.name !== event.target.name

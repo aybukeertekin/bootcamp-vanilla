@@ -7,22 +7,21 @@ const Form = ({onSubmit}) => {
         <div>
             <text>
                 Please do not add notes with same name.
-        </text>
+            </text>
         <form onSubmit={onSubmit}>
             <div className={"p-grid"}>
             <span className="p-float-label">
+                <InputText id="name"  className={"name-style"} />
                 <label htmlFor="name">Name</label>
-                <InputText type="text" className={"name-style"} id="name" />
             </span>
             </div>
             <div className={"p-grid"}>
             <span className="p-float-label">
+                <InputTextarea className={"name-style"} id="contents" />
                  <label htmlFor="contents">Content</label>
-                <InputTextarea type="text" className={"name-style"} id="contents" />
-
             </span>
             </div>
-            <Button  label="Submit"/>
+            <Button  label="Submit" />
         </form>
         </div>
     );
